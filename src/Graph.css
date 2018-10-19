@@ -1,0 +1,25 @@
+.circle {
+      width: 46px;
+      height: 46px;
+      line-height: 46px;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      border-radius: 25px;
+      background: black;
+	  -moz-user-select     : none;
+	  -khtml-user-select   : none;
+	  -webkit-user-select  : none;
+	  -o-user-select       : none;
+	  user-select          : none;
+  }
+
+  .circle:hover {
+	  cursor: pointer;
+	  background-color: #38F;
+  }
+
+
+  .test:hover {
+	  cursor: pointer;
+	  fill: #38F;
+  }
