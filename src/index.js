@@ -1,12 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
-import App from './components/app';
+import App from './App.js';
+
+import ReactDOM from "react-dom";
 
 const rootEl = document.getElementById('app');
+ReactDOM.render(<App />, rootEl);
 
-
-render(<App />, rootEl);
-
-if (module.hot) {
-    module.hot.accept();
-}

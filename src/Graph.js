@@ -180,7 +180,7 @@ class Graph extends Component {
 
 	}
 	
-	global = {
+	static global = {
 		padding : {
 			x : {left : 90, right : 80},
 			y : {up:70 , down:70}
