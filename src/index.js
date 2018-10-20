@@ -6,7 +6,6 @@ const Index = () => {
   return <div>Hello React!</div>;
 };
 
-const Graphh = <div><span>hello</span><Graph hidden={0} title="Sum_NoCC" sTitle ={["real", "img"]} index={[50, 51]} width={600} height={400}/></div>
 
 
 		const Comp = 
