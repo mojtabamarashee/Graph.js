@@ -115,8 +115,9 @@ class Graph extends Component {
 		this.props.data.y[1] = [0];
 
 	}
-	componentDidMount() {
+	componentDidMount = ()=> {
 		var i;
+		console.log("global = ", this.global);
 		for(i = 0; i < 100000; i++)
 		{
 			this.global.gx[i] = i;
@@ -180,7 +181,7 @@ class Graph extends Component {
 
 	}
 	
-	static global = {
+	global = {
 		padding : {
 			x : {left : 90, right : 80},
 			y : {up:70 , down:70}
@@ -669,43 +670,12 @@ class Graph extends Component {
 		ptr = this.global;
 		var pos = 10;
 		ptr.ctx1.font="15px Arial";
-
-
-		/*if(this.state.dbFlag == 1)
-		{
-			if(this.props.dbOffset != 0)
-			{
-				ptr.ctx1.fillStyle = "yellow";
-				var text = "dbOff = ";
-				var w = ptr.ctx1.measureText(text).width;
-				ptr.ctx1.fillText(text, pos, 20);
-				pos += w;
-
-				text = this.props.dbOffset.toString();
-				w = ptr.ctx1.measureText(text).width;
-				ptr.ctx1.fillStyle = "white";
-				ptr.ctx1.fillText(text, pos, 20);
-				pos += w;
-				pos += (this.global.FIRST_ROW_WIDTH);
-			}
-
-			if(this.state.refLevel != -1)
-			{
-				ptr.ctx1.fillStyle = "yellow";
-				text = "dbRef = ";
-				w = ptr.ctx1.measureText(text).width;
-				ptr.ctx1.fillText(text, pos, 20);
-				pos += w;
-				ptr.ctx1.fillStyle = "white";
-				ptr.ctx1.fillText(this.state.refLevel, pos, 20);
-				pos += (this.global.FIRST_ROW_WIDTH);
-			}
-		}*/
+		var text;
+		var w;
 
 
 		if(this.state.avgFlag == 1)
 		{
-			//if(ptr.dbOffset != 0)
 			{
 				ptr.ctx1.fillStyle = "yellow";
 				text = "AvgCntr = ";
@@ -1435,7 +1405,7 @@ function mapStateToProps(state, ownProps) {
 	  return {
 		  data: {y:ownProps.index.map(i=>{
 			  if(state.graph1Data[i] === undefined) 
-			  	return([0]) 
+			  	return([0, 1, 2, 3, 4, 5]) 
 			  else 
 			  	return(state.graph1Data[i])
 		  })

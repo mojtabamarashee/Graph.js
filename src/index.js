@@ -10,7 +10,7 @@ const Index = () => {
 
 const Comp = ()=>{ return(
 	<div>
-		<Graph hidden={0} title="Test" sTitle ={["test1", "test2"]} index={[50, 51]} width={600} height={400} data={{"x":0, "y":0}}/>
+		<Graph hidden={0} title="Test" sTitle ={["test1", "test2"]} index={[50]} width={600} height={400} data={{"y":[0]}}/>
 	</div>)}
 
 
