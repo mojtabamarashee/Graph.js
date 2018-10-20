@@ -8,23 +8,11 @@ const Index = () => {
 
 
 
-		const Comp = 
-			<div>
-				<Graph hidden= {0} title="Test" sTitle ={["test1", "test2"]} index={[50, 51]} width={600} height={400}/>
-			</div>
+const Comp = ()=>{ return(
+	<div>
+		<Graph hidden={0} title="Test" sTitle ={["test1", "test2"]} index={[50, 51]} width={600} height={400} data={{"x":0, "y":0}}/>
+	</div>)}
 
-		var hidden = 0;
-		const Comp2 = 
-				<div style={{display:hidden == 1 ? "none" : "block"}}>
-				{
-					Comp.props.children.map((child, index) => {
-						return React.cloneElement(child, {
-							hidden: hidden
-						})					
-					})
-				}
-				</div>
-	
 
 
 

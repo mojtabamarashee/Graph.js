@@ -1390,6 +1390,7 @@ class Graph extends Component {
 	}
 
 	render() {
+		console.log("render")
 		var Style = {
 			position:"absolute",
 			left: "0", 
@@ -1442,7 +1443,7 @@ function mapStateToProps(state, ownProps) {
 	}
 
 }
-export default connect(mapStateToProps)(Graph);
+export default (Graph);
 
 
 
