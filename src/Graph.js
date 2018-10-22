@@ -47,7 +47,6 @@ class Graph extends Component {
 		this.global.sxIndex = 0;
 		this.global.exIndex = 0;
 		this.state.refLevel = -1;
-		console.log("state = ", this.state);
 		//this.Plot();
 	}
 
@@ -111,8 +110,8 @@ class Graph extends Component {
 
 	componentWillMount() {
 
-		this.props.data.y[0] = [0];
-		this.props.data.y[1] = [0];
+		//this.props.data.y[0] = [0];
+		//this.props.data.y[1] = [0];
 
 	}
 	componentDidMount = ()=> {
@@ -840,6 +839,7 @@ class Graph extends Component {
 
 		var i;
 		this.global.y = this.props.data.y;
+		console.log("globaly = ", this.props.data.y);
 		this.state.plotNum = this.global.y.length;
 
 		if(this.state.pauseFlag == 0 || this.state.forcePlot == 1)
@@ -853,6 +853,7 @@ class Graph extends Component {
 				{
 					for(i = 0; i < this.state.plotNum; i++)
 					{
+						console.log("yPlot = ", this.global.yPlot[i]);
 						this.global.yPlot[i] = this.FindMaxH(this.global.y[i], this.global.maxHoldBuffer[i]);
 						this.global.maxHoldBuffer[i] = this.global.yPlot[i].slice(0, this.global.yPlot[i].length);
 					}
@@ -865,6 +866,7 @@ class Graph extends Component {
 					for(i = 0; i < this.state.plotNum; i++)
 					{
 						this.global.yPlot[i] = [];
+						console.log("yPlot = ", this.global.y[i]);
 						this.global.yPlot[i] = this.global.y[i].slice();
 					}
 				}
@@ -1360,7 +1362,6 @@ class Graph extends Component {
 	}
 
 	render() {
-		console.log("render")
 		var Style = {
 			position:"absolute",
 			left: "0", 
@@ -1400,19 +1401,19 @@ for(var i = 0; i < 10000; i++)
 	gx[i] = 0;
 }
 
-function mapStateToProps(state, ownProps) {
-	var out = [];
-	  return {
-		  data: {y:ownProps.index.map(i=>{
-			  if(state.graph1Data[i] === undefined) 
-			  	return([0, 1, 2, 3, 4, 5]) 
-			  else 
-			  	return(state.graph1Data[i])
-		  })
-	  },
-	}
-
-}
+//function mapStateToProps(state, ownProps) {
+//	var out = [];
+//	  return {
+//		  data: {y:ownProps.index.map(i=>{
+//			  if(state.graph1Data[i] === undefined) 
+//			  	return([0, 1, 2, 3, 4, 5]) 
+//			  else 
+//			  	return(state.graph1Data[i])
+//		  })
+//	  },
+//	}
+//
+//}
 export default (Graph);
 
 
