@@ -839,7 +839,7 @@ class Graph extends Component {
 
 		var i;
 		this.global.y = this.props.data.y;
-		console.log("globaly = ", this.props.data.y);
+		console.log("props = ", this.props.data);
 		this.state.plotNum = this.global.y.length;
 
 		if(this.state.pauseFlag == 0 || this.state.forcePlot == 1)
