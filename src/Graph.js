@@ -66,7 +66,6 @@ class Graph extends Component {
 
 	ToggleMaxHFlag()
 	{
-		console.log("maxHFlag = ", this.state.maxHFlag);
 		if(this.state.maxHFlag == 0)
 		{
 			this.setState({maxHFlag : 1});
@@ -81,7 +80,6 @@ class Graph extends Component {
 
 	ToggleAvgFlag()
 	{
-		console.log("avgFlag = ", this.state.avgFlag);
 		if(this.state.avgFlag == 0)
 		{
 			this.setState({avgFlag : 1});
@@ -116,7 +114,6 @@ class Graph extends Component {
 	}
 	componentDidMount = ()=> {
 		var i;
-		console.log("global = ", this.global);
 		for(i = 0; i < 100000; i++)
 		{
 			this.global.gx[i] = i;
@@ -133,6 +130,7 @@ class Graph extends Component {
 
 
 	shouldComponentUpdate(nextProps, nextState) {
+		return true;
 		if(nextProps.hidden == 0 && this.global.updateFlag == 1)
 		{
 			this.global.updateFlag = 0;
@@ -839,7 +837,6 @@ class Graph extends Component {
 
 		var i;
 		this.global.y = this.props.data.y;
-		console.log("props = ", this.props.data);
 		this.state.plotNum = this.global.y.length;
 
 		if(this.state.pauseFlag == 0 || this.state.forcePlot == 1)
@@ -853,7 +850,6 @@ class Graph extends Component {
 				{
 					for(i = 0; i < this.state.plotNum; i++)
 					{
-						console.log("yPlot = ", this.global.yPlot[i]);
 						this.global.yPlot[i] = this.FindMaxH(this.global.y[i], this.global.maxHoldBuffer[i]);
 						this.global.maxHoldBuffer[i] = this.global.yPlot[i].slice(0, this.global.yPlot[i].length);
 					}
@@ -866,7 +862,6 @@ class Graph extends Component {
 					for(i = 0; i < this.state.plotNum; i++)
 					{
 						this.global.yPlot[i] = [];
-						console.log("yPlot = ", this.global.y[i]);
 						this.global.yPlot[i] = this.global.y[i].slice();
 					}
 				}

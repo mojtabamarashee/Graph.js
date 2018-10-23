@@ -7,7 +7,7 @@ class Test extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			data : []
+			data : {y:[[1,2,3]]}
 		}
 	}
 	
@@ -15,7 +15,7 @@ class Test extends Component {
 	render(){
 
 		var arr = Array.from({length: 40}, () => Math.floor(Math.random() * 40));
-		setInterval(()=>{this.setState({data : {"y": [[0,1,2,4]]}})} , 1000);
+		setInterval(()=>{this.setState({data : {"y": [arr]}}); console.log(arr)} , 1000);
 
  return(
 
