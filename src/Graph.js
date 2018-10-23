@@ -131,6 +131,7 @@ class Graph extends Component {
 
 
 	shouldComponentUpdate(nextProps, nextState) {
+		return true;
 		if(nextProps.hidden == 0 && this.global.updateFlag == 1)
 		{
 			this.global.updateFlag = 0;
