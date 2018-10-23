@@ -135,7 +135,6 @@ class Graph extends Component {
 		if(nextProps.hidden == 0 && this.global.updateFlag == 1)
 		{
 			this.global.updateFlag = 0;
-			console.log("updateFlag = ", this.global.updateFlag);
 			return true;
 		}
 		else
@@ -1356,7 +1355,6 @@ class Graph extends Component {
 
 		setInterval(()=>{
 			this.global.updateFlag = 1;
-			console.log("updateFlag2 = ", this.global.updateFlag);
 		}, 50)
 
 	}
