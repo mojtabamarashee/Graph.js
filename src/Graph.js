@@ -113,6 +113,7 @@ class Graph extends Component {
 
 	}
 	componentDidMount = ()=> {
+		console.log("componentDidMount = ");
 		var i;
 		for(i = 0; i < 100000; i++)
 		{
@@ -130,14 +131,17 @@ class Graph extends Component {
 
 
 	shouldComponentUpdate(nextProps, nextState) {
-		return true;
+			return true;
 		if(nextProps.hidden == 0 && this.global.updateFlag == 1)
 		{
 			this.global.updateFlag = 0;
+			console.log("updateFlag = ", this.global.updateFlag);
 			return true;
 		}
 		else
 		{
+			console.log("updateFlag = ", this.global.updateFlag);
+
 			return false;
 		}
 	}
@@ -1352,6 +1356,7 @@ class Graph extends Component {
 
 		setInterval(()=>{
 			this.global.updateFlag = 1;
+			console.log("updateFlag2 = ", this.global.updateFlag);
 		}, 50)
 
 	}
