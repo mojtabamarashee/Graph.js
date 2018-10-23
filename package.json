@@ -6,10 +6,9 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
-    "test": "jest --silent --watch"
+    "test": "jest  --verbose --watch"
   },
   "jest": {
-	  "verbose": false,
 	  "setupFiles": ["jest-canvas-mock"],
 	  "setupTestFrameworkScriptFile": "<rootDir>__test__/setup/setupEnzyme.js",
 	  "testPathIgnorePatterns": [

@@ -131,7 +131,6 @@ class Graph extends Component {
 
 
 	shouldComponentUpdate(nextProps, nextState) {
-			return true;
 		if(nextProps.hidden == 0 && this.global.updateFlag == 1)
 		{
 			this.global.updateFlag = 0;
@@ -1353,10 +1352,12 @@ class Graph extends Component {
 		this.global.ctx3.font="15px Arial";
 		this.global.ctx3.fillStyle = "white";
 
-		setInterval(()=>{
-			this.global.updateFlag = 1;
-		}, 50)
+		setInterval(this.Interval(), 50)
 
+	}
+
+	Interval(){
+		this.global.updateFlag = 1;
 	}
 
 	render() {
