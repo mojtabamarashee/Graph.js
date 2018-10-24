@@ -11,7 +11,7 @@ npm start
 
 ```
 
-# Use
+# Usage
 ```javascript
 import React from "react";
 import {Component} from "react";
