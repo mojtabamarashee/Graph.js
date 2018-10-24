@@ -2,7 +2,7 @@
 
 # Install
 
-```
+```bash
 git clone http://github.com/mojtabamarashee/graph.js
 cd graph.js
 
