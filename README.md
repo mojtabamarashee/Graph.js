@@ -1,8 +1,8 @@
 # Graph.js
 
-#<a href="http://mojtabamarashee.github.io/graph.js">Demo</a>
+# <a href="http://mojtabamarashee.github.io/graph.js">Demo</a>
 
-#Install
+# Install
 
 ```
 git clone http://github.com/mojtabamarashee/graph.js
