@@ -82,9 +82,7 @@ export default class Tools extends Component {
 				</a>
 
 
-
-
-				<div class="circle" ref="maxH" style={style8} onClick = {() =>{ this.props.ToggleMaxHFlag(); if(this.refs.maxH.style.backgroundColor == "rgb(0, 0, 255)")
+				<div className="circle" ref="maxH" style={style8} onClick = {() =>{ this.props.ToggleMaxHFlag(); if(this.refs.maxH.style.backgroundColor == "rgb(0, 0, 255)")
 					this.refs.maxH.style.backgroundColor = "rgb(0, 0, 0)"
 						else
 							this.refs.maxH.style.backgroundColor = "rgb(0, 0, 255)"
