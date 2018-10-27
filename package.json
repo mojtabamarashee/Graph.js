@@ -43,6 +43,7 @@
     "webpack-dev-server": "^3.1.9"
   },
   "dependencies": {
+    "@material-ui/core": "^3.3.1",
     "babel-core": "^7.0.0-bridge.0",
     "jest": "^23.6.0",
     "npm": "^6.4.1",
