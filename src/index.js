@@ -23,8 +23,9 @@ class Test extends Component {
 	render(){
 
 		var arr = Array.from({length: 40}, () => Math.floor(Math.random() * 40));
+		var arr1 = Array.from({length: 40}, () => Math.floor(Math.random() * 40));
 		clearInterval(this.interval)
-		this.interval = setInterval(()=>{this.setState({data : {"y": [arr]}})} , this.state.updateInterval);
+		this.interval = setInterval(()=>{this.setState({data : {"y": [arr,arr1]}})} , this.state.updateInterval);
 
  return(
 
