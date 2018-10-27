@@ -190,7 +190,7 @@ class Graph extends Component {
 		gx : [],
 		maxHoldBuffer : [],
 		avgAcc : [],
-		accNum : 10,
+		accNum : 1000,
 		FIRST_ROW_WIDTH : 50,
 		updateFlag : 0,
 
