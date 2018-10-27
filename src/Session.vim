@@ -2,6 +2,11 @@ let SessionLoad = 1
 if &cp | set nocp | endif
 let s:cpo_save=&cpo
 set cpo&vim
+inoremap <silent> <Plug>(neocomplcache_start_omni_complete) 
+inoremap <silent> <Plug>(neocomplcache_start_auto_complete_no_select) 
+inoremap <silent> <Plug>(neocomplcache_start_auto_complete) =neocomplcache#mappings#popup_post()
+inoremap <silent> <expr> <Plug>(neocomplcache_start_unite_quick_match) unite#sources#neocomplcache#start_quick_match()
+inoremap <silent> <expr> <Plug>(neocomplcache_start_unite_complete) unite#sources#neocomplcache#start_complete()
 nmap <NL> <Plug>MoveLineDown
 vmap <NL> <Plug>MoveBlockDown
 nmap  <Plug>MoveLineUp
@@ -486,7 +491,8 @@ set autoread
 set background=dark
 set backspace=indent,eol,start
 set clipboard=unnamed
-set completeopt=menuone,longest
+set completefunc=neocomplcache#complete#manual_complete
+set completeopt=menuone
 set fileencodings=ucs-bom,utf-8,default,latin1
 set helplang=en
 set history=10000
@@ -511,19 +517,20 @@ set tabstop=4
 set viminfo='100,<50,s10,h,!
 set visualbell
 set wildignore=*\\tmp\\*,*.swp,*.zip,*.exe,*.o
+set window=37
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd /e/working/react_search/src
+cd /e/working/graph.js
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +0 index.js
+badd +0 src/Graph.js
 argglobal
 silent! argdel *
-$argadd index.js
-edit index.js
+$argadd src/Graph.js
+edit src/Graph.js
 set splitbelow splitright
 set nosplitbelow
 set nosplitright
@@ -550,7 +557,7 @@ setlocal commentstring=//%s
 setlocal complete=.,w,b,u,t,i
 setlocal concealcursor=
 setlocal conceallevel=0
-setlocal completefunc=
+setlocal completefunc=neocomplcache#complete#auto_complete
 setlocal nocopyindent
 setlocal cryptmethod=
 setlocal nocursorbind
@@ -644,13 +651,13 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 10) / 21)
+let s:l = 1346 - ((17 * winheight(0) + 17) / 35)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 0
-lcd /e/working/react_search/src
+1346
+normal! 041|
+lcd /e/working/graph.js/src
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf

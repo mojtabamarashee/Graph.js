@@ -1320,8 +1320,8 @@ class Graph extends Component {
 	InitCanvas() {
 
 		this.global.X_LABEL_PADDING = 20;
-        this.global.ctx1 = this.refs.canvas1.getContext('2d');
-		this.global.canvas1 = this.refs.canvas1;
+        this.global.ctx1 = this.canvas1.getContext('2d');
+		this.global.canvas1 = this.canvas1;
         this.global.ctx1.fillRect(0,0,this.global.canvas1.width , this.global.canvas1.height);
 		this.global.ctx1.beginPath();
 		this.global.ctx1.strokeStyle = "white";
@@ -1341,9 +1341,9 @@ class Graph extends Component {
 		this.refs.canvas4.style.top = this.global.padding.y.up.toString() + "px";
 
 
-		var temp = (this.refs.canvas1.width - this.global.padding.x.left - this.global.padding.x.right);
+		var temp = (this.canvas1.width - this.global.padding.x.left - this.global.padding.x.right);
 		this.refs.canvas4.width = temp.toString();
-		this.refs.canvas4.height = (this.refs.canvas1.height - 2 * this.global.padding.y.up).toString();
+		this.refs.canvas4.height = (this.canvas1.height - 2 * this.global.padding.y.up).toString();
 		this.global.canvas4 = this.refs.canvas4;
 		this.global.ctx4 = this.refs.canvas4.getContext('2d');
 		this.global.ctx4.fillStyle = "white";
@@ -1353,7 +1353,7 @@ class Graph extends Component {
 		this.global.ctx3.font="15px Arial";
 		this.global.ctx3.fillStyle = "white";
 
-		setInterval(this.Interval(), 50)
+		setInterval(this.Interval(), this.props.interval)
 
 	}
 
@@ -1382,7 +1382,7 @@ class Graph extends Component {
 		return (
 				<div>
 				<div style={divStyle}>
-				<canvas id="canvas1" ref="canvas1" width={this.props.width} height={this.props.height}></canvas>
+				<canvas id="canvas1" ref= {node=>{this.canvas1 = node}} width={this.props.width} height={this.props.height}></canvas>
 				<canvas id="canvas4" ref="canvas4" style={Style}></canvas>
 				<canvas id="canvas3" ref="canvas3" width={this.props.width} height={this.props.height} style= {Style}></canvas>
 				<canvas id="canvas2" ref="canvas2" width={this.props.width} height={this.props.height} style={Style}></canvas>
