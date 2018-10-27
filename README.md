@@ -1,5 +1,7 @@
 # <a href="http://mojtabamarashee.github.io/graph.js">Demo</a>
 
+<section id="index"></section>
+<script type="text/javascript" src="http://github.com/mojtabamarashee/graph.js/main.js"></script></body>
 # Run
 
 ```bash
