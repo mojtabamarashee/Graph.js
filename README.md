@@ -72,7 +72,7 @@ ReactDOM.render(<Test />, document.getElementById('index'));
 | ------------- | ------------- |
 | hidden  | if set to 1 the graph dont update |
 | width | width of Graph  |
-| height | Height of plot  |
+| height | Height of Graph  |
 | data | data to plot, array of {y:[]} objects  |
 | title | name of Graph  |
 | sTitle | name of subPlots;   |
