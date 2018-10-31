@@ -22,6 +22,7 @@ npm start
 1. Auto Scale X , Y axise
 2. Zoom In (using mouse) and out
 3. Max Hold
+4. Avg Calculater 
 
 
 # Usage
@@ -65,6 +66,7 @@ ReactDOM.render(<Test />, document.getElementById('index'));
 ````
 
 
+#Props
 
 | Name | Des |
 | ------------- | ------------- |
