@@ -57,3 +57,14 @@ ReactDOM.render(<Test />, document.getElementById('index'));
 
 ````
 
+
+
+| Name | Des |
+| ------------- | ------------- |
+| hidden  | if set to 1 the graph dont update |
+| width | width of Graph  |
+| height | Height of plot  |
+| data | data to plot, array of {y:[]} objects  |
+| title | name of Graph  |
+| sTitle | name of subPlots;   |
+
