@@ -66,7 +66,7 @@ ReactDOM.render(<Test />, document.getElementById('index'));
 ````
 
 
-#Props
+# Props
 
 | Name | Des |
 | ------------- | ------------- |
