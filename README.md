@@ -17,6 +17,13 @@ npm start
 
 ```
 
+
+# Features
+1. Auto Scale X , Y axise
+2. Zoom In (using mouse) and out
+3. Max Hold
+
+
 # Usage
 ```javascript
 import React from 'react';
