@@ -43,7 +43,7 @@ class Graph extends Component {
     this.global.sxIndex = 0
     this.global.exIndex = 0
     this.state.refLevel = -1
-    //this.Plot();
+    // this.Plot();
   }
 
   TogglePause() {
@@ -92,7 +92,7 @@ class Graph extends Component {
     }
 
     this.InitCanvas()
-    //		setInterval(this.Test.bind(this), 10);
+    // setInterval(this.Test.bind(this), 10);
     this.Plot()
     this.refs.canvas2.addEventListener('mousedown', this.MouseDown)
     this.refs.canvas2.addEventListener('mousemove', this.MouseMove)
@@ -152,18 +152,18 @@ class Graph extends Component {
   }
 
   showAxes() {
-    //ctx1.textAlign="center";
+    // ctx1.textAlign="center";
 
-    var ptr = this.global
-    var step = ((ptr.maxX - ptr.minX) * 1) / ptr.AXES_STEP_NUM_X
+    const ptr = this.global
+    let step = ((ptr.maxX - ptr.minX) * 1) / ptr.AXES_STEP_NUM_X
 
-    //x grid
+    // x grid
     ptr.ctx1.closePath()
     ptr.ctx1.beginPath()
     ptr.ctx1.font = '15px Arial'
     ptr.ctx1.strokeStyle = 'green'
     ptr.ctx1.lineWidth = '1'
-    for (var i = 0; i <= ptr.AXES_STEP_NUM_X; i++) {
+    for (let i = 0; i <= ptr.AXES_STEP_NUM_X; i++) {
       ptr.ctx1.moveTo(this.global.padding.x.left + ptr.scaleX * i * step, ptr.canvas1.height - this.global.padding.y.up)
       ptr.ctx1.lineTo(this.global.padding.x.left + ptr.scaleX * i * step, this.global.padding.y.down)
     }
@@ -190,11 +190,11 @@ class Graph extends Component {
     ptr.ctx1.moveTo(this.global.padding.x.left, ptr.canvas1.height - this.global.padding.y.up)
     ptr.ctx1.lineTo(ptr.canvas1.width - this.global.padding.x.right, ptr.canvas1.height - this.global.padding.y.up)
 
-    //Y axis
+    // Y axis
     ptr.ctx1.moveTo(this.global.padding.x.left, this.global.padding.y.down)
     ptr.ctx1.lineTo(this.global.padding.x.left, ptr.canvas1.height - this.global.padding.y.up)
 
-    //x label
+    // x label
     step = ((ptr.maxX - ptr.minX) * 1) / ptr.AXES_STEP_NUM_X
     var w1 = ptr.ctx1.measureText(ptr.maxX).width
     var w2 = ptr.ctx1.measureText(ptr.minX).width
